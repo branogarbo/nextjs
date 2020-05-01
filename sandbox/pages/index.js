@@ -4,7 +4,7 @@ export default function Home() {
   let demos = ['list','timer'];
   let listItems = demos.map(demo =>
     <Link href={`/demos/${demo}`}>
-      <a><li>{project} demo</li></a>
+      <a><li>{demo} demo</li></a>
     </Link>
   )
 
