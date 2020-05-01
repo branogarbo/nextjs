@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Home() {
   let projects = ['list','timer'];
   let listItems = projects.map(project =>
-    <Link href={`/projects/${project}`}>
+    <Link href={`/demos/${project}`}>
       <a><li>{project} demo</li></a>
     </Link>
   )
