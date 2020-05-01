@@ -1,4 +1,3 @@
-import React from 'react'
 import Timer from '../../components/timer'
 import Template from '../../components/template'
 

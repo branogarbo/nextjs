@@ -8,7 +8,7 @@ export default (props) => {
 
          {props.children}
 
-         <Link href="/"><a className={style.backToHome}>&larr; Back to Home</a></Link>
+         <Link href="/"><a className={style.backToHome}><img className={style.BTHarrow} src="/left-arrow.svg" /> Back to Home</a></Link>
       </div>
    )
 }

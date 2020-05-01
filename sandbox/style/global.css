@@ -10,8 +10,9 @@ body {
    margin:0;
 }
 
-a:visited {
-   color:red;
+a {
+   color:#0077ff;
+   text-decoration:none;
 }
 
 .list {

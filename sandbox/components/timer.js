@@ -17,7 +17,7 @@ export default function Timer() {
       let tick = null;
 
       if (isOn) {
-         tick = setInterval(() => setSeconds(seconds + 1), 0);
+         tick = setInterval(() => setSeconds(seconds + 1), 1000);
       }
 
       else if (!isOn && seconds != 0) {
@@ -29,7 +29,7 @@ export default function Timer() {
 
    return (
       <div className="container">
-         <h2>{seconds}</h2>
+         <h2>{seconds}s</h2>
          <button onClick={toggleTimer}>{isOn ? 'Stop' : 'Start'}</button>
          <button onClick={resetTimer}>Reset</button>
       </div>
