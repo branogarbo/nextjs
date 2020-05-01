@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 export default function Home() {
-  let projects = ['list','timer'];
-  let listItems = projects.map(project =>
-    <Link href={`/demos/${project}`}>
+  let demos = ['list','timer'];
+  let listItems = demos.map(demo =>
+    <Link href={`/demos/${demo}`}>
       <a><li>{project} demo</li></a>
     </Link>
   )
