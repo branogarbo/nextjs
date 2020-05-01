@@ -1,0 +1,19 @@
+* {
+   font-family: 'Roboto Mono', monospace;
+}
+
+body {
+   display:grid;
+   place-content:center;
+   width:100vw;
+   height:100vh;
+   margin:0;
+}
+
+a:visited {
+   color:red;
+}
+
+.list {
+   color:red;
+}
