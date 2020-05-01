@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import style from '../style/template.module.css'
 
-export default (props) => {
+export default function Template(props) {
    return (
       <div className="container">
          <h1>{props.title}</h1>
