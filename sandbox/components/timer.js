@@ -19,8 +19,7 @@ export default function Timer() {
       if (isOn) {
          tick = setInterval(() => setSeconds(seconds + 1), 1000);
       }
-
-      else if (!isOn && seconds != 0) {
+      else {
          clearInterval(tick);
       }
 
