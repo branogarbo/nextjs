@@ -1,12 +1,13 @@
-import React from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function List(props) {
-   let input = React.useRef('');
-   let [state,setState] = React.useState({
+   let input = useRef('');
+   let [state,setState] = useState({
       items: props.items
    });
-
    let listItems = state.items.map(item => <li>{item}</li>);
+
+   useEffect(() => input.current.focus());
 
    let checkKey = event => {
       if (event.key === "Enter") {
