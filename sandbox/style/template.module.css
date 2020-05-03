@@ -1,7 +1,7 @@
 .backToHome {
-   position:absolute;
-   bottom:2rem;
+   position:fixed;
    left:2rem;
+   bottom:2rem;
    display:flex;
    align-items:center;
 }

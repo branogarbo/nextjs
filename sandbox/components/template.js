@@ -3,7 +3,7 @@ import style from '../style/template.module.css'
 
 export default function Template(props) {
    return (
-      <div className="container">
+      <div className={style.container}>
          <h1>{props.title}</h1>
 
          {props.children}

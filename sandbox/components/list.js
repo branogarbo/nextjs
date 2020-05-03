@@ -16,29 +16,41 @@ export default function List(props) {
    
    let appendItem = value => {
       input.current.value = "";
-      
-      if (value <= 0 || value > state.items.length) return;
+      value = value.trim();
 
-      if (!isNaN(value)) {
+      // queue route
+      if (value.includes(',')) {
+         let itemQueue = value.split(',');
+         
+         itemQueue.forEach(item => appendItem(item));
+      }
+
+      // number route
+      else if (!isNaN(value)) {
+         if (value <= 0 || value > state.items.length) return;
+
          state.items.splice(value-1,1);
-
+         
          setState({
             items: state.items
          });
-
-         return;
       }
 
-      if (value === "*") {
-         clearList();
-         return;
-      }
+      // string route
+      else {
+         if (value === "*") {
+            clearList();
+            return;
+         }
 
-      state.items.push(value);
-      
-      setState({
-         items: state.items
-      });
+         if (state.items.includes(value) || state.items.length >= 10) return;
+
+         state.items.push(value);
+               
+         setState({
+            items: state.items
+         });
+      }
    }
 
    let clearList = () => {
