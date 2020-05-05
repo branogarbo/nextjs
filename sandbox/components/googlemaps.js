@@ -1,4 +1,4 @@
-import { Map as GoogleMap, GoogleApiWrapper } from 'google-maps-react'
+import { Map as GoogleMap, GoogleApiWrapper, Marker } from 'google-maps-react'
 
 function Map({google}) {
    let mapStyle = {
@@ -14,18 +14,19 @@ function Map({google}) {
 
    return (
       <GoogleMap
-      google={google}
       zoom={8}
-      style={mapStyle}
-      containerStyle={containerStyle}
       initialCenter={{ lat: 21, lng: -158 }}
-      >
+      google={google}
+      style={mapStyle}
+      containerStyle={containerStyle}>
+
+         <Marker lat={21} lng={-158} />
 
       </GoogleMap>
    );
 }
 
 export default GoogleApiWrapper({
-   apiKey:'AIzaSyAGbGP7TgyCeE_swPMkR51_eI8buznd5bc',
+   apiKey: process.env.GOOGLE_MAPS_API_KEY,
    LoadingContainer: ()=> <b>Loading...</b>
 })(Map);
