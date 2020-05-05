@@ -1,9 +1,17 @@
-import Router from 'next/router'
-import { useEffect } from 'react'
-import Home from './home'
+import Link from 'next/link'
 
-export default function IndexPage() {
-  useEffect(()=> Router.push('/','/home', { shallow:true }), []);
+export default function Home() {
+  let demos = ['list','timer','map'];
+  let listItems = demos.map(demo =>
+    <Link href={`/demos/${demo}`}>
+      <a><li>{demo} demo</li></a>
+    </Link>
+  );
 
-  return <Home />;
+  return (
+    <div className="container">
+      <h1>Home</h1>
+      <ol>{listItems}</ol>
+    </div>
+  );
 }

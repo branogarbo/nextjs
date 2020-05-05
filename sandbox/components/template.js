@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import style from '../style/template.module.css'
 
-export default function Template(props) {
+export default function Template({ title, children }) {
    return (
       <div className={style.container}>
-         <h1>{props.title}</h1>
+         <h1>{title}</h1>
 
-         {props.children}
+         {children}
 
-         <Link href="/home">
+         <Link href="/">
             <a className={style.backToHome}>
                <img className={style.BTHarrow} src="/left-arrow.svg" /> Back to Home
             </a>
