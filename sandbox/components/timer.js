@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from 'react'
 
 export default function Timer() {
    let [seconds,setSeconds] = React.useState(0);
@@ -13,7 +13,7 @@ export default function Timer() {
       setOn(false);
    }
 
-   React.useEffect(()=>{
+   useEffect(()=>{
       let tick = null;
 
       if (isOn) {
