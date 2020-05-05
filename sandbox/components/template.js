@@ -8,7 +8,7 @@ export default function Template(props) {
 
          {props.children}
 
-         <Link href="/">
+         <Link href="/home">
             <a className={style.backToHome}>
                <img className={style.BTHarrow} src="/left-arrow.svg" /> Back to Home
             </a>

@@ -24,7 +24,7 @@ export default function Map() {
    return (
       <MapGL 
          mapStyle="mapbox://styles/branomap/ck9rqnqqz0d5e1im9s3xm1k9a" 
-         mapboxApiAccessToken="pk.eyJ1IjoiYnJhbm9tYXAiLCJhIjoiY2s5cm9pZ3k0MG00ZDNlbXIxdXNreW4wdCJ9.DjmMyAvuhgUqszReI1LR9w" 
+         mapboxApiAccessToken={process.env.MAPBOX_API_ACCESS_TOKEN}
          onViewportChange={viewport => setState({viewport})} 
          {...state.viewport}>
 

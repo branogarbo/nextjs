@@ -6,12 +6,12 @@ export default function Home() {
     <Link href={`/demos/${demo}`}>
       <a><li>{demo} demo</li></a>
     </Link>
-  )
+  );
 
   return (
     <div className="container">
       <h1>Home</h1>
       <ol>{listItems}</ol>
     </div>
-  )
+  );
 }
