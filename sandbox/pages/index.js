@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Home from './home'
 
 export default function IndexPage() {
-  useEffect(()=> Router.replace('/','/home', { shallow:true }));
+  useEffect(()=> Router.push('/','/home', { shallow:true }), []);
 
   return <Home />;
 }
