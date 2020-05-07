@@ -12,22 +12,24 @@ export default function ApiGet() {
 
   let getData = () => setShouldFetch(true);
 
+  let button = <button onClick={getData}>get data</button>
+
   if (error) return (
     <div>
       <div>failed to load</div>
-      <button onClick={getData}>get data</button>
+      {button}
     </div>
   )
   if (!data) return (
     <div>
       <div>{shouldFetch ? 'Loading...' : 'click for data'}</div>
-      <button onClick={getData}>get data</button>
+      {button}
     </div>
   )
   return (
     <div>
       <div>{data.message}</div>
-      <button onClick={getData}>get data</button>
+      {button}
     </div>
   )
 } 
