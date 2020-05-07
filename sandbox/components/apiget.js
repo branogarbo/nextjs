@@ -10,26 +10,14 @@ export default function ApiGet() {
   let [shouldFetch,setShouldFetch] = useState(false);
   let { data, error } = useSWR(shouldFetch ? '/api/apitest' : null, fetcher);
 
-  let getData = () => setShouldFetch(true);
+  let Comp = ({message}) => (
+    <div>
+      <div>{message}</div>
+      <button onClick={()=> setShouldFetch(true)}>get data</button>
+    </div>
+  );
 
-  let button = <button onClick={getData}>get data</button>
-
-  if (error) return (
-    <div>
-      <div>failed to load</div>
-      {button}
-    </div>
-  )
-  if (!data) return (
-    <div>
-      <div>{shouldFetch ? 'Loading...' : 'click for data'}</div>
-      {button}
-    </div>
-  )
-  return (
-    <div>
-      <div>{data.message}</div>
-      {button}
-    </div>
-  )
+  if (error) return <Comp message="failed to load" />
+  if (!data) return <Comp message={shouldFetch ? 'Loading...' : 'click for data'} />
+  return <Comp message={data.message} />
 } 
