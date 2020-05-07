@@ -20,4 +20,4 @@ export default function ApiGet() {
   if (error) return <Comp message="failed to load" />
   if (!data) return <Comp message={shouldFetch ? 'Loading...' : 'click for data'} />
   return <Comp message={data.message} />
-} 
+}

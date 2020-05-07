@@ -1,4 +1,4 @@
-import ApiGet from '../../components/apiget'
+import ApiGet from '../../components/api'
 import Template from '../../components/template'
 
 export default () => {

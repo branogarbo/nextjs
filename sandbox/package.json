@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "google-maps-react": "^2.0.6",
+    "mongodb": "^3.5.7",
     "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
