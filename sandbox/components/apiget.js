@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import {useState} from 'react'
+import { useState } from 'react'
 
 let fetcher = async (...args) => {
    let res = await fetch(...args);
