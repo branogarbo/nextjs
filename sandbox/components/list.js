@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 export default function List(props) {
    let input = useRef('');
    let [state,setState] = useState({
-      items: props.items
+      items: props.initItems
    });
    let listItems = state.items.map(item => <li>{item}</li>);
 

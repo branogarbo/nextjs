@@ -4,7 +4,7 @@ import Template from '../../components/template'
 export default () => {
    return (
       <Template title="List Demo">
-         <List type="ol" items={['starting', 'values']} /> 
+         <List type="ol" initItems={['starting', 'values']} /> 
       </Template>
    );
 }
