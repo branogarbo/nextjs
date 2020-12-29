@@ -1,0 +1,18 @@
+.parent {
+   width: 800px;
+   height: 600px;
+   border-radius: 10px;
+   background: rgb(233, 233, 233);
+}
+
+.ball {
+   background-color: rgb(64, 64, 255);
+   border-radius: 50%;
+   width: 80px;
+   height: 80px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   transform-origin: center center;
+   border: 3px solid black;
+}
