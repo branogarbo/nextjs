@@ -1,13 +1,14 @@
 import anime from 'animejs'
 import { useEffect, useRef } from 'react'
-import style from '../style/anime.module.css'
+import style from '../style/anime1.module.css'
 
-export default function Anime() {
+export default function Anime1() {
    let ball = useRef(null);
    
    useEffect(() => {
       anime({
          targets: '#ball',
+         opacity: 1,
          translateX: window.innerWidth/2 - 40,
          translateY: window.innerHeight/2 - 40,
          duration: 0

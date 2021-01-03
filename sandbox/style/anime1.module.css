@@ -15,4 +15,5 @@
    top: 0;
    transform-origin: center center;
    border: 3px solid black;
+   opacity: 0;
 }
